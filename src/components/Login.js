@@ -68,7 +68,7 @@ const Login = () => {
       <div className="container mt-3">
         <section className="d-flex justify-content-between">
           <div className="left_data mt-5 p-3" style={{ width: "100%" }}>
-            <h3 className="col-lg-6">Selamat Datang</h3>
+            <h3 className="col-lg-6">Selamat Datang.</h3>
             <br></br>
             <h7 className="col-lg-6">Email</h7>
             <Form>
@@ -98,13 +98,13 @@ const Login = () => {
                 onClick={addData}
                 type="submit"
               >
-                Submit
+                Masuk
               </Button>
             </Form>
             <p className="mt-3">
-              Already Have an Account
+              Belum Punya Akun?
               <span>
-                <NavLink to="/"> Sign Up</NavLink>
+                <NavLink to="/"> Daftar</NavLink>
               </span>
             </p>
           </div>

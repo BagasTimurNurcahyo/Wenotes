@@ -95,13 +95,13 @@ const Home = () => {
                 onClick={addData}
                 type="submit"
               >
-                Submit
+                Daftar
               </Button>
             </Form>
             <p className="mt-3">
-              Already Have an Account
+              Sudah Punya Akun?
               <span>
-                <NavLink to="/login"> Sign In</NavLink>
+                <NavLink to="/login"> Login</NavLink>
               </span>
             </p>
           </div>
