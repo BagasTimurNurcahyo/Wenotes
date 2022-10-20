@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -8,6 +9,7 @@ const Header = () => {
   const history = useNavigate();
   const location = useLocation();
   const HandleLogout = () => {
+    Swal.fire("Logout berhasil");
     history("/");
   };
   return (

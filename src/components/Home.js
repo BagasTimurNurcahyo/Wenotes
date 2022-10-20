@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import SIgn_img from "./SIgn_img";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [inpval, setInpval] = useState({
@@ -11,6 +12,7 @@ const Home = () => {
     password: "",
   });
 
+  const history = useNavigate();
   const [data, setData] = useState([]);
   console.log(inpval);
 
@@ -44,6 +46,8 @@ const Home = () => {
       console.log("data added successfully");
 
       localStorage.setItem("userwenotes", JSON.stringify([...data, inpval]));
+      Swal.fire("Registrasi akun berhasil");
+      history("/login");
     }
   };
 

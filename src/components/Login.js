@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import SIgn_img from "./SIgn_img";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const history = useNavigate();
@@ -53,6 +54,9 @@ const Login = () => {
           alert("invalid details");
         } else {
           console.log("user login success");
+
+          localStorage.setItem("user_login", JSON.stringify(getuserArr));
+          Swal.fire("Login berhasil");
           history("/notes");
         }
       }
@@ -97,6 +101,12 @@ const Login = () => {
                 Submit
               </Button>
             </Form>
+            <p className="mt-3">
+              Already Have an Account
+              <span>
+                <NavLink to="/"> Sign Up</NavLink>
+              </span>
+            </p>
           </div>
           <SIgn_img />
         </section>

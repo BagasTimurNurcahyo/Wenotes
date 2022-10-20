@@ -424,3 +424,30 @@ input:focus {
   font-size: small;
   margin: 0 8px;
 }
+.tooltip-container {
+  display: flex;
+  justify-content: right;
+}
+
+.tooltip {
+  opacity: 100 !important;
+  display: inline-block !important;
+  padding: 0 !important;
+}
+
+#form-buttons {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  align-content: center;
+  padding-right: 1rem;
+}
+
+.icon-button {
+  margin-top: 0 !important;
+}
+
+.tooltip label {
+  height: 30px !important;
+  width: 30px !important;
+  margin-right: 0.5rem;
+}
